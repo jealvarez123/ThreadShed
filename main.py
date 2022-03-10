@@ -148,7 +148,6 @@ thread_sold_split = []
 for i in thread_sold:
   for n in i.split("&"):
     thread_sold_split.append(n)
-# print(thread_sold_split)
 
 def color_count(color):
   count = 0
@@ -156,25 +155,8 @@ def color_count(color):
     if i == color:
       count += 1
   return count
-# print(color_count("white"))
 
 colors = ["red", "yellow", "green", "white", "black", "blue", "purple"]
 
 for i in colors:
    print("Thread Shed sold {} threads of {} thread today".format(color_count(i), i))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
