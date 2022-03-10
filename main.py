@@ -110,16 +110,13 @@ green&white;,;09/15/17,   Gail Phelps   ;,;$30.52
 # Start coding below!
 
 daily_sales_replaced = daily_sales.replace(";,;", "+")
-# print(daily_sales_replaced)
 
 daily_transactions = daily_sales_replaced.split(",")
-# print(daily_transactions)
 
 daily_transactions_split = []
 
 for i in daily_transactions:
   daily_transactions_split.append(i.split("+"))
-# print(daily_transactions_split)
 
 transactions_clean = []
 for transaction in daily_transactions_split:
@@ -127,7 +124,6 @@ for transaction in daily_transactions_split:
   for data_point in transaction:
     transaction_clean.append(data_point.replace("\n", "").strip(" "))
   transactions_clean.append(transaction_clean)
-# print(transactions_clean)
 
 customers = []
 sales = []
@@ -137,12 +133,10 @@ for i in transactions_clean:
   sales.append(i[1])
   thread_sold.append(i[2])
 
-
 # define a varible call total_sales and set it equal to 0
 total_sales = 0
 for i in sales:
   total_sales += float(i[1:])
-# print(total_sales)
 
 thread_sold_split = []
 for i in thread_sold:
